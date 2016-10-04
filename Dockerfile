@@ -11,8 +11,7 @@ MAINTAINER Maintaner Name
 # Add the application resources URL
 
 # Update the sources list
-RUN apt-get update
-RUN apt-get upgrade 
+RUN apt-get update 
 # Install basic applications
 RUN apt-get install -y tar git curl nano wget dialog net-tools build-essential
 
@@ -23,7 +22,7 @@ ADD /dt228_cloud /dt228_cloud
 # Get pip to download and install requirements:
 RUN pip install -r /dt228_cloud/requirements.txt
 # Expose ports
-EXPOSE 8080
+EXPOSE 80
 # Set the default directory where CMD will execute
 WORKDIR /dt228_cloud
 # Set the default command to execute
